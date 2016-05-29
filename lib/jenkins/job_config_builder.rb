@@ -256,7 +256,7 @@ module Jenkins
               b.tag! "hudson.tasks.Mailer" do
                 b.recipients params.join(', ')
                 b.dontNotifyEveryUnstableBuild false
-                b.sendToIndividuals true
+                b.sendToIndividuals false
               end
             when :job_triggers
               b.tag! "hudson.tasks.BuildTrigger" do
